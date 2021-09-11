@@ -7,7 +7,7 @@ export default {
 
   [MODULE_NAMESPACE.UPDATE_TODO] (state, payload) {
     let todoIndex = state.list.findIndex(todo => todo.id === payload.id)
-    state.list[todoIndex] = payload
+    state.list.splice(todoIndex, 1, payload)
   },
 
   [MODULE_NAMESPACE.DELETE_TODO] (state, id) {

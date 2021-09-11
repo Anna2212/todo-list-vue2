@@ -1,17 +1,15 @@
 <template>
   <div class="list">
     <ul>
-      <template v-for="(todo, index) in todoList">
-        <li :key="`todo-${index}`" class="list-todo-item">
-          <span :class="{ 'todo-complete': todo.completed }">{{todo.title}}</span>
+      <li v-for="(todo) in todoList" :key="`todo-${todo.id}`" class="list-todo-item">
+        <span :class="{ 'todo-complete': todo.completed }">{{todo.title}}</span>
 
-          <div class="action-wrapper">
-            <button v-if="!todo.completed" class="success-button" @click="updateTodo(todo)">Complete</button>
-            <button v-if="todo.completed" class="restore-button" @click="updateTodo(todo)">Restore</button>
-            <button class="delete-button" @click="deleteTodo(todo)">Delete</button>
-          </div>
-        </li>
-      </template>
+        <div class="action-wrapper">
+          <button v-if="!todo.completed" class="success-button" @click="updateTodo(todo)">Complete</button>
+          <button v-if="todo.completed" class="restore-button" @click="updateTodo(todo)">Restore</button>
+          <button class="delete-button" @click="deleteTodo(todo)">Delete</button>
+        </div>
+      </li>
     </ul>
   </div>
 </template>

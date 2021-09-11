@@ -3,7 +3,7 @@
     <h1>Todos</h1>
     <div class="list-wrapper">
       <create-todo/>
-      <todo-list/>
+      <list/>
     </div>
   </div>
 </template>
@@ -15,8 +15,8 @@
   export default {
     name: 'TodoListMain',
     components: {
-      'todo-list': List,
-      'create-todo': CreateTodo
+      List,
+      CreateTodo
     }
   }
 </script>
