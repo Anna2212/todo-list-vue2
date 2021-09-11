@@ -4,9 +4,7 @@ import VUEX_MODULES from '@/store/vuex.modules'
 import LIST_MODULE from '@/store/modules/List'
 import createPersistedState from 'vuex-persistedstate';
 
-
 Vue.use(Vuex)
-
 
 const store = new Vuex.Store({
   plugins: [
